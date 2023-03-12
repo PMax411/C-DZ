@@ -18,3 +18,14 @@ else
 {
     Console.WriteLine($"Наибольшая цифра число {number} -> {seconddig} ");
 }
+
+int result = MaxDigit(number);
+ Console.WriteLine($"Наибольшая цифра число {result}");
+
+int MaxDigit(int num)
+{
+    int firstdig = num / 10;
+    int seconddig = num % 10;
+    int maxDigit = firstdig > seconddig ? firstdig : seconddig;
+    return maxDigit;
+}
