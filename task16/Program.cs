@@ -16,7 +16,7 @@ Console.Write("Введите число №1 ");
 
  bool squre (int secondNum, int firstNum) {
     
-        return   secondNum == firstNum * firstNum ;
+        return   secondNum == firstNum * firstNum || firstNum == secondNum*secondNum   ;
 
     
  }
