@@ -15,13 +15,11 @@ TableCube(num);
 
 void TableCube(int number)
 {
-int count = 1;
-while (count <= number)
-{
-int cube = count * count*count;
-Console.WriteLine($"{count, 3} -> {cube, 5}");
-count++;
+    int count = 1;
+    while (count <= number)
+    {
+        int cube = count * count * count;
+        Console.WriteLine($"{count, 3} -> {cube, 5}");
+        count++;
+    }
 }
-
-}
-
