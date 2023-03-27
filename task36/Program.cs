@@ -30,7 +30,7 @@ Printarray(array);
 Console.WriteLine();
 
 int result = SumOddNumber(array);
-Console.WriteLine($"Количество четных чисел в масиве => {result}");
+Console.WriteLine($"сумма элементов, стоящих на нечётных позициях в масиве => {result}");
 
 int SumOddNumber(int[] arr)
 {
