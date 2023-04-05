@@ -4,32 +4,32 @@
 // 1 -3,3 8 -9,9
 // 8 7,8 -7,1 9
 
-int [,] CreateMatrix(int rows, int column, int min, int max)
+double[,] CreateMatrixDouble(int rows, int column, double min, double max)
 {
-    int[,] matrix = new int[rows, column];
+    double[,] matrix = new double[rows, column];
     Random rnd = new Random();
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i, j] = rnd.Next(min, max + 1);
+            double tempDigit = rnd.NextDouble() * (max - min) + min;
+            matrix[i, j] = Math.Round(tempDigit, 1);
         }
     }
     return matrix;
 }
 
-void Printarray(int[,]  matrix)
+void Printarray(double[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         Console.Write("[");
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.Write($"{matrix[i, j], 8} ");
+            Console.Write($"{matrix[i, j], 7} ");
         }
         Console.WriteLine("]");
     }
 }
-
-doble [,] arr2d = CreateMatrix(3, 4,1 ,10);
+double[,] arr2d = CreateMatrixDouble(3, 4, -100, 100);
 Printarray(arr2d);
